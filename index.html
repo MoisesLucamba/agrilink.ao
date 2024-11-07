@@ -163,41 +163,45 @@
         </div>
 
         <hr/>
-        <section id="ultimas-atualizacoes" class="py-12 bg-gray-100">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-800">Últimas Atualizações da AgriLink</h2>
-                <p class="mt-2 text-lg text-gray-600">
-                    A AgriLink continua ampliando sua influência e presença no setor agrícola de Angola. Confira nossos marcos mais recentes e as oportunidades que fortaleceram nossa rede.
+       <section id="ultimas-atualizacoes" class="py-12 bg-green-50">
+    <div class="max-w-3xl mx-auto text-center mb-8">
+        <h2 class="text-3xl font-bold text-green-800">🌱 Últimas Atualizações da AgriLink</h2>
+        <p class="mt-2 text-lg text-green-600">
+            A AgriLink continua ampliando sua influência no setor agrícola de Angola. Confira nossos marcos recentes e novidades!
+        </p>
+    </div>
+
+    <!-- Carrossel -->
+    <div class="relative max-w-4xl mx-auto">
+        <div class="carousel flex overflow-hidden transition-transform duration-700 ease-out" id="carousel">
+            <!-- Slide 1 -->
+            <div class="carousel-item flex-shrink-0 w-full flex flex-col items-center p-5">
+                <h3 class="text-2xl font-semibold text-green-700">Participação no Programa Conexões - 1ª Edição</h3>
+                <p class="mt-2 text-green-600 text-center max-w-lg">
+                    Na segunda sessão do programa Conexões, com foco em agricultura, a AgriLink teve excelente visibilidade e fez grandes conexões no setor.
                 </p>
+                <img src="MM.jpg" alt="Programa Conexões" class="mt-5 w-full max-w-lg rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105">
             </div>
-        
-            <!-- Atualização 1: Programa Conexões -->
-            <div class="mt-10 border-b border-gray-300 pb-10">
-                <h3 class="text-2xl font-semibold text-gray-700">Participação no Programa Conexões - 1ª Edição</h3>
-                <p class="mt-3 text-gray-600">
-                    Na segunda sessão do programa Conexões, com foco em agricultura e agropecuária, a AgriLink teve uma excelente visibilidade. Este evento possibilitou conexões importantes com grandes players do setor agrícola em Angola.
+
+            <!-- Slide 2 -->
+            <div class="carousel-item flex-shrink-0 w-full flex flex-col items-center p-5">
+                <h3 class="text-2xl font-semibold text-green-700">Destaque no Acelera Agro</h3>
+                <p class="mt-2 text-green-600 text-center max-w-lg">
+                    A AgriLink foi destaque no programa Acelera Agro, conectando-se com mentes inovadoras para impulsionar o setor agrícola em Angola.
                 </p>
-                <!-- Espaço para foto -->
-                <div class="mt-5 flex justify-center">
-                    <img src="MM.jpg" alt="Foto do Programa Conexões" class="w-full max-w-xl rounded-lg shadow-lg">
-                </div>
+                <img src="nmm.jpg" alt="Acelera Agro" class="mt-5 w-full max-w-lg rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105">
             </div>
-        
-            <!-- Atualização 2: Acelera Agro -->
-            <div class="mt-10">
-                <h3 class="text-2xl font-semibold text-gray-700">Destaque no Acelera Agro</h3>
-                <p class="mt-3 text-gray-600">
-                    A AgriLink foi destaque no programa de ideação Acelera Agro, voltado para ideias inovadoras no setor. Este evento proporcionou novas conexões com mentes brilhantes e influentes, ampliando nossas oportunidades de inovação.
-                </p>
-                <!-- Espaço para foto -->
-                <div class="mt-5 flex justify-center">
-                    <img src="nmm.jpg" alt="Foto do Acelera Agro" class="w-full max-w-xl rounded-lg shadow-lg">
-                </div>
-            </div>
-        </section>
-        
-        
-    </section>
+        </div>
+
+        <!-- Navegação do Carrossel -->
+        <div class="flex justify-center space-x-4 mt-6">
+            <button onclick="moveCarousel(-1)" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full">←</button>
+            <button onclick="moveCarousel(1)" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full">→</button>
+        </div>
+    </div>
+</section>
+
+
 <!-- Oportunidades de Investimento -->
 <section id="investment" class="container mx-auto py-20 text-center bg-gray-100">
     <h2 class="text-4xl font-extrabold text-green-700 mb-6">Oportunidades de Investimento</h2>
@@ -331,6 +335,18 @@
         mobileMenu.classList.toggle('hidden');
     });
 </script>
+
+        <script>
+    let currentIndex = 0;
+    const carousel = document.getElementById('carousel');
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+    function moveCarousel(direction) {
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+</script>
+
 
 </body>
 </html>
