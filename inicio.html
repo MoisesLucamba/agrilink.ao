@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriLink - Conectando Agricultura e Mercado</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="ESTAMOS.png" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Cabeçalho -->
+    <header class="bg-green-600 text-white p-4 fixed w-full z-10 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="ESTAMOS.png" alt="Logo AgriLink" class="h-10 mr-4">
+                <div class="text-2xl font-bold">AgriLink</div>
+            </div>
+
+            <!-- Botão do menu (visível apenas em telas menores) -->
+            <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Navbar -->
+            <nav id="navbar" class="hidden md:flex space-x-4">
+                <a href="#home" class="hover:text-green-300">Home</a>
+                <a href="#about" class="hover:text-green-300">Sobre</a>
+                <a href="#services" class="hover:text-green-300">Serviços</a>
+                <a href="#marketplace" class="hover:text-green-300">Marketplace</a>
+                <a href="#team" class="hover:text-green-300">Equipe</a>
+                <a href="#contact" class="hover:text-green-300">Contato</a>
+                <button class="ml-4 bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-green-500 hover:text-white transition">Login</button>
+            </nav>
+        </div>
+
+        <!-- Menu móvel (exibido apenas em telas menores) -->
+        <nav id="mobile-menu" class="md:hidden hidden flex-col mt-4 bg-green-700 text-white space-y-2 p-4">
+            <a href="#home" class="hover:text-green-300">Home</a>
+            <a href="#about" class="hover:text-green-300">Sobre</a>
+            <a href="#services" class="hover:text-green-300">Serviços</a>
+            <a href="#marketplace" class="hover:text-green-300">Marketplace</a>
+            <a href="#team" class="hover:text-green-300">Equipe</a>
+            <a href="#contact" class="hover:text-green-300">Contato</a>
+            <button class="bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-green-500 hover:text-white transition">Login</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('african-man-harvesting-vegetables.jpg')">
+        <div class="text-center text-white bg-black bg-opacity-60 p-8 rounded-lg shadow-lg">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Conectando Produtores e Empresas</h1>
+            <p class="text-lg md:text-xl mb-6">Facilitando o acesso a produtos agrícolas de qualidade e promovendo parcerias duradouras.</p>
+            <button onclick="window.location.href='#about'" class="px-6 py-3 bg-green-600 rounded-lg text-white hover:bg-green-700 transition duration-300 ease-in-out shadow-md hover:shadow-lg">Saiba Mais</button>
+        </div>
+    </section>
+    
+
+    <!-- Sobre Nós -->
+   <!-- Sobre Nós -->
+<section id="about" class="container mx-auto py-20 text-center bg-white">
+    <!-- Título da Seção -->
+    <h2 class="text-4xl font-extrabold text-green-700 mb-6 uppercase tracking-wide">Sobre Nós</h2>
+    
+    <!-- Descrição da Seção -->
+    <p class="text-xl max-w-2xl mx-auto mb-12 text-gray-700 leading-relaxed">
+        Na AgriLink, estamos transformando a forma como o setor agrícola se conecta. Facilitamos o acesso direto entre agricultores e consumidores, eliminando intermediários para promover uma cadeia de abastecimento mais sustentável e eficiente.
+    </p>
+    
+    <!-- Ícones de Valor com Descrições -->
+    <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
+        <!-- Card de Sustentabilidade -->
+        <div class="bg-green-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 text-center">
+            <img src="https://img.freepik.com/free-photo/digital-screen-with-environment-day_23-2148884835.jpg?ga=GA1.1.1647570883.1730791441&semt=ais_hybrid" alt="Sustentabilidade" class="w-16 h-16 mx-auto mb-4">
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Sustentabilidade</h3>
+            <p class="text-gray-600">Comprometidos com práticas que minimizam o impacto ambiental e incentivam o cultivo responsável.</p>
+        </div>
+        
+        <!-- Card de Logística Inteligente -->
+        <div class="bg-green-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 text-center">
+            <img src="https://img.freepik.com/free-photo/male-entrepreneur-analyzing-stock-products-orders-doing-inventory-laptop-warehouse-young-man-using-logistics-financial-planning-send-merchandise-development-handheld-shot_482257-62665.jpg?ga=GA1.1.1647570883.1730791441&semt=ais_hybrid" alt="Logística Inteligente" class="w-16 h-16 mx-auto mb-4">
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Logística Inteligente</h3>
+            <p class="text-gray-600">Utilizamos tecnologia de ponta para otimizar o transporte, garantindo eficiência e redução de custos.</p>
+        </div>
+        
+        <!-- Card de Conexão Direta -->
+        <div class="bg-green-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 text-center">
+            <img src="https://img.freepik.com/free-photo/closeup-two-men-sharing-content-with-their-phones_181624-46720.jpg?ga=GA1.1.1647570883.1730791441&semt=ais_hybrid" alt="Conexão Direta" class="w-16 h-16 mx-auto mb-4">
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Conexão Direta</h3>
+            <p class="text-gray-600">Construindo pontes entre agricultores e consumidores, promovendo acesso direto e justo.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Equipe -->
+    <section id="team" class="bg-gray-50 py-20 text-center">
+        <h2 class="text-3xl font-bold text-green-600 mb-12">Nossa Equipe</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
+                <img src="AgriLink.aoaa.png" alt="Moises Lucamba" class="rounded-full w-32 h-32 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Moises Lucamba</h3>
+                <p class="text-green-600">Programador Fullstack e Líder da AgriLink</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
+                <img src="AgriLink.aooo.png" alt="Nelma Quicuambi" class="rounded-full w-32 h-32 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Nelma Quicuambi</h3>
+                <p class="text-green-600">Estudante de Contabilidade</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
+                <img src="AgriLink.aoa.png" alt="Feliciano Cassoma" class="rounded-full w-32 h-32 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Feliciano Cassoma</h3>
+                <p class="text-green-600">Estudante de Engenharia Mecatrônica</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
+                <img src="AgriLink.aoaaa.png" alt="Lucrecia Kavili" class="rounded-full w-32 h-32 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Lucrecia Kavili</h3>
+                <p class="text-green-600">Contabilista e Estudante de Administração</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
+                <img src="AgriLink.aoo.png" alt="Claudio Henriques" class="rounded-full w-32 h-32 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Claudio Henriques</h3>
+                <p class="text-green-600">Programador Backend e Técnico de Informática</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Tecnologias -->
+    <section id="technologies" class="container mx-auto py-20 text-center">
+        <h2 class="text-3xl font-bold text-green-600 mb-4">Nossas Tecnologias</h2>
+        <p class="text-lg max-w-2xl mx-auto mb-8">Utilizamos tecnologia de ponta para otimizar a logística, garantir a segurança dos dados e promover a eficiência no mercado agrícola.</p>
+        <div class="flex justify-center space-x-4">
+            <div class="p-4">
+                <i class="fab fa-react text-4xl text-blue-600"></i>
+                <p>React</p>
+            </div>
+            <div class="p-4">
+                <i class="fab fa-node text-4xl text-green-600"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="p-4">
+                <i class="fas fa-database text-4xl text-yellow-600"></i>
+                <p>MongoDB</p>
+            </div>
+            <div class="p-4">
+                <i class="fab fa-python text-4xl text-blue-400"></i>
+                <p>Python</p>
+            </div>
+            <div class="p-4">
+                <i class="fas fa-chart-line text-4xl text-red-600"></i>
+                <p>Big Data</p>
+            </div>
+        </div>
+
+        <hr/>
+        <section id="ultimas-atualizacoes" class="py-12 bg-gray-100">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800">Últimas Atualizações da AgriLink</h2>
+                <p class="mt-2 text-lg text-gray-600">
+                    A AgriLink continua ampliando sua influência e presença no setor agrícola de Angola. Confira nossos marcos mais recentes e as oportunidades que fortaleceram nossa rede.
+                </p>
+            </div>
+        
+            <!-- Atualização 1: Programa Conexões -->
+            <div class="mt-10 border-b border-gray-300 pb-10">
+                <h3 class="text-2xl font-semibold text-gray-700">Participação no Programa Conexões - 1ª Edição</h3>
+                <p class="mt-3 text-gray-600">
+                    Na segunda sessão do programa Conexões, com foco em agricultura e agropecuária, a AgriLink teve uma excelente visibilidade. Este evento possibilitou conexões importantes com grandes players do setor agrícola em Angola.
+                </p>
+                <!-- Espaço para foto -->
+                <div class="mt-5 flex justify-center">
+                    <img src="MM.jpg" alt="Foto do Programa Conexões" class="w-full max-w-xl rounded-lg shadow-lg">
+                </div>
+            </div>
+        
+            <!-- Atualização 2: Acelera Agro -->
+            <div class="mt-10">
+                <h3 class="text-2xl font-semibold text-gray-700">Destaque no Acelera Agro</h3>
+                <p class="mt-3 text-gray-600">
+                    A AgriLink foi destaque no programa de ideação Acelera Agro, voltado para ideias inovadoras no setor. Este evento proporcionou novas conexões com mentes brilhantes e influentes, ampliando nossas oportunidades de inovação.
+                </p>
+                <!-- Espaço para foto -->
+                <div class="mt-5 flex justify-center">
+                    <img src="nmm.jpg" alt="Foto do Acelera Agro" class="w-full max-w-xl rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+        
+        
+    </section>
+<!-- Oportunidades de Investimento -->
+<section id="investment" class="container mx-auto py-20 text-center bg-gray-100">
+    <h2 class="text-4xl font-extrabold text-green-700 mb-6">Oportunidades de Investimento</h2>
+    <p class="text-xl max-w-2xl mx-auto mb-8 text-gray-700">
+        Aproveite a chance de fazer parte de uma startup que transforma o setor agrícola de Angola! Estamos abertos a parcerias e investimentos com até <span class="font-bold">30% da nossa empresa disponível</span> para novos sócios.
+    </p>
+
+    <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 mb-12">
+        <!-- Ícone de Investimento Fragmentado -->
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm flex items-center flex-col">
+            <img src="https://img.freepik.com/free-photo/business-concept-with-graphic-holography_23-2149160929.jpg?ga=GA1.1.1647570883.1730791441&semt=ais_hybrid" alt="Ícone de Investimento Fragmentado" class="h-16 mb-4">
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Investimento Fragmentado</h3>
+            <p class="text-gray-600">
+                Invista de acordo com sua capacidade. Compras podem ser fragmentadas para facilitar a entrada de cada investidor no projeto.
+            </p>
+        </div>
+
+        <!-- Ícone de Materiais e Imóveis -->
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm flex items-center flex-col">
+            <img src="https://img.freepik.com/free-photo/low-angle-shot-facade-white-modern-building-blue-clear-sky_181624-48219.jpg?ga=GA1.1.1647570883.1730791441&semt=ais_hybrid" alt="Ícone de Materiais e Imóveis" class="h-16 mb-4">
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Materiais e Imóveis</h3>
+            <p class="text-gray-600">
+                Aceitamos investimentos não apenas financeiros, mas também em materiais e imóveis que contribuam com o crescimento do nosso negócio.
+            </p>
+        </div>
+
+        <!-- Ícone de Parcerias Comerciais -->
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm flex items-center flex-col">
+            <img src="https://img.freepik.com/free-photo/medium-shot-man-wearing-helmet_23-2149426470.jpg?ga=GA1.1.1647570883.1730791441&semt=ais_hybrid" alt="Ícone de Parcerias Comerciais" class="h-16 mb-4">
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Parcerias Estratégicas</h3>
+            <p class="text-gray-600">
+                Junte-se a nós! Estamos abertos a parcerias com empresas de transporte, processamento de alimentos, supermercados e mais.
+            </p>
+        </div>
+    </div>
+
+    <!-- Imagem Representativa do Setor Agrícola -->
+    <img src="https://img.freepik.com/free-photo/full-shot-woman-holding-box_23-2149894684.jpg?ga=GA1.1.1647570883.1730791441&semt=ais_hybrid" alt="Imagem do Setor Agrícola" class="w-full h-80 object-cover mb-12 rounded-lg shadow-md">
+
+    <!-- Formulário de Interesse em Investimento -->
+    <form action="https://formspree.io/f/{SEU-ENDPOINT}" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg space-y-4">
+        <input type="text" name="Nome" placeholder="Nome" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" required>
+        <input type="email" name="Email" placeholder="E-mail" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" required>
+        <input type="text" name="Capacidade de Investimento" placeholder="Capacidade de Investimento (em Kz ou US$)" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+        <textarea name="Mensagem" placeholder="Mensagem ou Proposta de Parceria" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+        <button type="submit" class="w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Enviar Interesse</button>
+    </form>
+    
+</section>
+
+  
+
+    <!-- Rodapé -->
+    <!-- Rodapé -->
+<footer class="bg-green-700 text-white py-12">
+    <div class="container mx-auto px-4">
+        <!-- Newsletter e Engajamento -->
+        <div class="md:flex md:justify-between mb-8">
+            <!-- Newsletter -->
+            <div class="mb-8 md:mb-0 md:w-1/2">
+                <h3 class="text-2xl font-bold mb-4">Inscreva-se na nossa Newsletter</h3>
+                <p class="mb-4">Receba atualizações sobre nossos projetos, novos produtos e oportunidades exclusivas!</p>
+                <form action="https://formspree.io/f/xyz123" method="POST" class="flex flex-col sm:flex-row">
+                    <input type="email" name="email" placeholder="Seu email" class="w-full p-3 rounded-lg mb-4 sm:mb-0 sm:mr-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    <button type="submit" class="w-full sm:w-auto bg-white text-green-700 font-semibold py-3 px-6 rounded-lg hover:bg-green-500 hover:text-white transition">Inscrever-se</button>
+                </form>
+            </div>
+            
+
+            <!-- Links de Engajamento -->
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">Sobre</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-green-300">Nossa Missão</a></li>
+                        <li><a href="#team" class="hover:text-green-300">Equipe</a></li>
+                        <li><a href="#activities" class="hover:text-green-300">Atividades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">Colabore Conosco</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#partnerships" class="hover:text-green-300">Parcerias</a></li>
+                        <li><a href="#investments" class="hover:text-green-300">Investimentos</a></li>
+                        <li><a href="#contact" class="hover:text-green-300">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha de Divisão -->
+        <hr class="border-gray-400 my-8">
+
+        <!-- Informações e Links de Navegação -->
+        <div class="md:flex md:justify-between">
+            <!-- Informações de Contato -->
+            <div class="mb-8 md:mb-0">
+                <h4 class="text-lg font-semibold mb-4">Fale Conosco</h4>
+                <p class="mb-2">Telefone: +244 922 71 75 74</p>
+                <p>Email: equipeagrilink@gmail.com</p>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://www.instagram.com/agrilink.ao/" target="_blank" class="hover:text-green-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/agrilink-ao-049025337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="hover:text-green-300">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/922717574" target="_blank" class="hover:text-green-300">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            
+            
+        </div>
+
+        <!-- Direitos Autorais -->
+        <div class="text-center mt-8 text-sm text-gray-300">
+            &copy; 2024 AgriLink. Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
+<script>
+    // Responsividade da navbar
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>
